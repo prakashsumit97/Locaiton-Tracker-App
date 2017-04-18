@@ -1,0 +1,42 @@
+<div class="container-fluid">
+    <div class="row">
+        <center>
+            <h1>New User Register here</h1>
+        </center>
+    </div>
+    <div>
+        <hr>
+    </div>
+    <div class="row">
+        <form role="form" name="signupForm">
+            <div class="form-group" style="margin-top:30px">
+                <center><input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your name" style="width:300px;height:40px" name="name" ng-model="user.name" required></center>
+
+            </div>
+            <div class="form-group" style="margin-top:30px">
+                <center><input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" style="width:300px;height:40px" name="email" ng-model="user.email" required></center>
+
+            </div>
+            <div class="form-group" style="margin-top:30px">
+                <center><input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="width:300px;height:40px" name="password" ng-model="user.password" required></center>
+
+            </div>
+
+
+            <center><button type="submit" class="btn btn-success" style="width:300px;height:40px" ng-disabled="signupForm.$invalid" ng-click="signup(user)">Register</button></center>
+            <center>
+                <p class="text-success" ng-show="successMsg"><strong class="text-success">{{successMsg}}</strong></p>
+            </center>
+            <center>
+                <p class="text-danger" ng-show="errorMsg">
+                    {{errorMsg}}
+                </p>
+            </center>
+            <center style="margin-top:20px">
+                <a ui-sref="login">
+                    <p>If already register go to login</p>
+                </a>
+            </center>
+        </form>
+    </div>
+</div>
